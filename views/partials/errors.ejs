@@ -1,0 +1,10 @@
+<% if(locals.errors){ %>
+    <hr>
+    <p>Errors:</p>
+    <% errors.forEach((error)=> { %>
+        <p>
+            <%= error.msg%>
+        </p>
+        <% })%>
+            <hr>
+            <% } %>

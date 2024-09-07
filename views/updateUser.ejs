@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- title %></title>
+</head>
+
+<body>
+    <%- include("partials/errors.ejs") %>
+        <form method="post" action="/updateuser/<%= userToUpdate.id %>">
+            <label for="id">User Id:</label>
+            <p>
+                <%= userToUpdate.id %>
+            </p> <br />
+            <label for="firstName">Edit First Name: </label>
+            <input type="text" name="firstName" value="<%= userToUpdate.firstName %>"><br />
+
+            <label for="lastName">Edit Last Name: </label>
+            <input type="text" name="lastName" value="<%= userToUpdate.lastName %>"><br />
+            <label for="email">Enter Email </label>
+            <input type="email" name="email" value="<%= userToUpdate.email %>"><br />
+            <label for="age">Enter Age: </label>
+            <input type="number" name="age" value="<%= userToUpdate.age %>"><br />
+            <label for="bio">Enter Bio: </label>
+            <input type="text" name="bio" value="<%= userToUpdate.bio %>"><br />
+            <!-- <button type="submit">Create User</button> -->
+            <button type="submit">Update User</button>
+        </form>
+</body>
+
+</html>

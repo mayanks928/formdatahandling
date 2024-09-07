@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%- title %></title>
+</head>
+
+<body>
+    <%- include("partials/errors.ejs") %>
+        <form method="post" action="/create">
+            <label for="firstName">Enter First Name: </label>
+            <input type="text" name="firstName"><br />
+
+            <label for="lastName">Enter Last Name: </label>
+            <input type="text" name="lastName"><br />
+            <label for="email">Enter Email </label>
+            <input type="email" name="email"><br />
+            <label for="age">Enter Age: </label>
+            <input type="number" name="age"><br />
+            <label for="bio">Enter Bio: </label>
+            <input type="text" name="bio"><br />
+            <button type="submit">Create User</button>
+        </form>
+</body>
+
+</html>
